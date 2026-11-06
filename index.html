@@ -1,41 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harish K – AI/ML Developer Portfolio. Final-year B.Tech IT student specializing in Machine Learning, RAG, Prompt Engineering, and full-stack AI applications." />
+  <meta name="keywords" content="Harish K, AI ML Developer, Machine Learning, RAG, Portfolio, Python, PostGIS, YOLO" />
+  <meta property="og:title" content="Harish K | AI / ML Developer" />
+  <meta property="og:description" content="AI/ML Developer skilled in RAG, Prompt Engineering, YOLO, PostGIS, and building practical AI applications." />
+  <title>Harish K | AI / ML Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons (using emoji as fallback, no CDN dependency) -->
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Boxicons CDN -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-     <video class="bg-video" autoplay muted loop playsinline src="background.mp4"></video>
-        <nav class="navbar">
-        <a href="#" class="logo"> WELCOME TO PORTFOLIO</a>
-        <ul>
-        <li class="active"><a href="index.html">HOME</a></li>
-        <div class="buttons"></div>
-           <li><a href="about.html">About</a></li>
-           <li><a href="skills.html">SKILLS</a></li>
-           <li><a href="certificate.html">CERTIFICATE</a></li>
-           <li><a href="contact.html">CONTACT</a></li>
+
+  <!-- Animated Background -->
+  <div class="bg-gradient"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- ───── NAVBAR ───── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Harish<span>.</span></a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero"        class="nav-link active">Home</a></li>
+      <li><a href="#about"       class="nav-link">About</a></li>
+      <li><a href="#experience"  class="nav-link">Experience</a></li>
+      <li><a href="#projects"    class="nav-link">Projects</a></li>
+      <li><a href="#skills"      class="nav-link">Skills</a></li>
+      <li><a href="#education"   class="nav-link">Education</a></li>
+      <li><a href="#certificates" class="nav-link">Certs</a></li>
+      <li><a href="#contact"     class="nav-link nav-cta">Hire Me</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Harish <span class="highlight">K</span></h1>
+        <p class="hero-role"><span id="typed-role"></span><span class="cursor">|</span></p>
+
+        <p class="hero-bio">
+          Final-year B.Tech Information Technology student (CGPA 8.23/10) with two AI/ML internships
+          and hands-on experience building RAG pipelines, YOLO-based vision systems, and prompt-engineered
+          AI tools. Seeking to bring practical AI solutions to real-world manufacturing and automation challenges.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">2</div>
+            <div class="stat-label">AI/ML Internships</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">8.23</div>
+            <div class="stat-label">CGPA / 10</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn-secondary">View Projects</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/Harish-kamal2005" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="mailto:harishkamal2005@gmail.com" class="social-link" aria-label="Email">
+            <i class='bx bx-envelope'></i>
+          </a>
+          <a href="tel:+919342588023" class="social-link" aria-label="Phone">
+            <i class='bx bx-phone'></i>
+          </a>
+          <a href="https://harish-kamal2005.github.io/porfolio" target="_blank" rel="noopener" class="social-link" aria-label="Portfolio">
+            <i class='bx bx-globe'></i>
+          </a>
+        </div>
+      </div><!-- .hero-text -->
+
+      <div class="hero-image">
+        <div class="hero-img-ring">
+          <div class="ring-outer"></div>
+          <div class="ring-inner"></div>
+          <div class="img-container">
+            <img src="image.jpg" alt="Harish K – AI/ML Developer" />
+          </div>
+        </div>
+
+        <div class="hero-badge-float hero-badge-1">
+          <div class="dot"></div>
+          <span>Open to Opportunities</span>
+        </div>
+        <div class="hero-badge-float hero-badge-2">
+          <div class="dot"></div>
+          <span>AI/ML Intern × 2</span>
+        </div>
+      </div><!-- .hero-image -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+       ═══════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-tag">Who I Am</div>
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">A passionate AI/ML developer turning real-world problems into intelligent solutions.</p>
+
+    <div class="about-grid reveal">
+
+      <div class="about-info">
+        <h3>Personal Info</h3>
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="label">Name</span>
+            <span class="value">Harish K</span>
+          </li>
+          <li class="info-item">
+            <span class="label">DOB</span>
+            <span class="value">27 September 2005</span>
+          </li>
+          <li class="info-item">
+            <span class="label">Email</span>
+            <span class="value"><a href="mailto:harishkamal2005@gmail.com">harishkamal2005@gmail.com</a></span>
+          </li>
+          <li class="info-item">
+            <span class="label">Phone</span>
+            <span class="value">+91 93425 88023</span>
+          </li>
+          <li class="info-item">
+            <span class="label">Location</span>
+            <span class="value">Arakkonam, Tamil Nadu</span>
+          </li>
+          <li class="info-item">
+            <span class="label">GitHub</span>
+            <span class="value"><a href="https://github.com/Harish-kamal2005" target="_blank" rel="noopener">Harish-kamal2005</a></span>
+          </li>
+          <li class="info-item">
+            <span class="label">Portfolio</span>
+            <span class="value"><a href="https://harish-kamal2005.github.io/porfolio" target="_blank" rel="noopener">harish-kamal2005.github.io</a></span>
+          </li>
+          <li class="info-item">
+            <span class="label">Languages</span>
+            <span class="value">English, Tamil</span>
+          </li>
         </ul>
-        </nav>
-    <section class="home">
-        <div class="home-info">
-            <h3>Hello, It's me</h3>
-            <h1>Harish</h1>
-            <h3> And I'm a Web Developer</h3>
-            <p style="size: 100px;"> for more info </p>
+      </div>
+
+      <div class="card about-profile">
+        <h3>Profile</h3>
+        <p class="profile-text">
+          Final-year B.Tech Information Technology student at P.T. Lee Chengalvaraya Naicker College of
+          Engineering &amp; Technology (Anna University), maintaining a CGPA of <strong>8.23/10</strong>.
+          I have completed two AI/ML internships and built projects spanning diabetes diagnosis, 3D cadastral
+          mapping, food-allergy detection, and Kolam pattern generation.
+        </p>
+        <p class="profile-text" style="margin-top:12px;">
+          I am deeply interested in <strong>prompt engineering</strong>, <strong>Retrieval-Augmented Generation (RAG)</strong>,
+          <strong>LLM-based applications</strong>, and connecting AI to databases and practical manufacturing solutions —
+          perfectly aligned with the Indo Tech Digital Transformation mission.
+        </p>
+
+        <div class="strengths">
+          <h4>Core Strengths</h4>
+          <div class="strength-item">Problem Solving &amp; Analytical Thinking</div>
+          <div class="strength-item">Debugging Complex AI Pipelines</div>
+          <div class="strength-item">Clear Technical Communication (English)</div>
+          <div class="strength-item">Prompt Engineering &amp; Workflow Design</div>
+          <div class="strength-item">GitHub Issue Management &amp; Documentation</div>
         </div>
-    </section>   
-    <div class="btn-sci">
-             <a href="assets/mycv.pdf" class="btn" download>Download CV</a>
+      </div>
+
     </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+       ═══════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="section-tag">Work History</div>
+    <h2 class="section-title">Internship Experience</h2>
+    <p class="section-sub">Hands-on AI/ML internships delivering real product value.</p>
+
+    <div class="timeline reveal">
+
+      <div class="timeline-item reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="card exp-card">
+          <div class="exp-header">
+            <span class="exp-title">AI/ML Intern</span>
+            <span class="exp-period">01 Jun 2026 — 01 Jul 2026</span>
+          </div>
+          <p class="exp-company">
+            <i class='bx bx-buildings'></i>&nbsp; Infra Delta Solutions, Chengalpattu
+          </p>
+          <p class="exp-desc">
+            Worked on AI/ML tools and pipeline design for real-world infrastructure applications.
+            Responsibilities included prototyping ML models, building data workflows, and
+            documenting outputs against source specifications to prevent hallucinations —
+            directly aligned with applied AI/ML responsibilities.
+          </p>
+          <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="badge">Machine Learning</span>
+            <span class="badge">Python</span>
+            <span class="badge">Prompt Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="card exp-card">
+          <div class="exp-header">
+            <span class="exp-title">AI/ML Intern</span>
+            <span class="exp-period">19 Jun 2025 — 23 Jul 2025</span>
+          </div>
+          <p class="exp-company">
+            <i class='bx bx-buildings'></i>&nbsp; Virtual Tech Services, Chennai
+          </p>
+          <p class="exp-desc">
+            Developed a diabetes diagnosis solution applying predictive machine learning
+            techniques using clinical datasets. Built predictive models, performed feature
+            engineering, and validated outputs using cross-validation methodologies —
+            a genuine problem-solving AI/ML project.
+          </p>
+          <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="badge">scikit-learn</span>
+            <span class="badge">Predictive Modelling</span>
+            <span class="badge">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+       ═══════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-tag">What I've Built</div>
+    <h2 class="section-title">Selected Projects</h2>
+    <p class="section-sub">Practical AI/ML applications solving real problems — from 3D property mapping to food safety.</p>
+
+    <div class="projects-grid">
+
+      <!-- Featured -->
+      <div class="card project-card featured reveal">
+        <div class="project-header">
+          <h3 class="project-title">3D ULPIN Generation &amp; Vertical Property Mapping</h3>
+          <span class="badge badge-orange">In Progress · PS 26011</span>
+        </div>
+        <p class="project-desc">
+          Smart India Hackathon project to build a 3D cadastral platform extending India's 2D land parcel ID (ULPIN)
+          to individual floors and underground units. Uses LiDAR/drone data, YOLO-based building extraction,
+          PostGIS for spatial storage, and CesiumJS for 3D visualization. Transforms 2D parcels into validated
+          3D volumetric property units with unique spatial identifiers — a large-scale geospatial AI system.
+        </p>
+        <div class="project-tags">
+          <span class="badge">YOLO</span>
+          <span class="badge">PostGIS</span>
+          <span class="badge">CesiumJS</span>
+          <span class="badge">LIDAR</span>
+          <span class="badge">Python</span>
+          <span class="badge">PostgreSQL</span>
+        </div>
+      </div>
+
+      <!-- Attendance -->
+      <div class="card project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <h3 class="project-title">Attendance Management System</h3>
+          <span class="badge badge-green">Completed</span>
+        </div>
+        <p class="project-desc">
+          A full web-based system to record and manage student attendance deployed at
+          Don Bosco College of Agriculture. Features AI-powered face recognition sync,
+          bulk enrollment via Excel/ZIP, SMS notifications, and a teacher dashboard.
+          Maintained on GitHub with issue tracking and resolution.
+        </p>
+        <div class="project-tags">
+          <span class="badge">Django</span>
+          <span class="badge">MySQL</span>
+          <span class="badge">Face Recognition</span>
+          <span class="badge">GitHub</span>
+          <span class="badge">SMS API</span>
+        </div>
+      </div>
+
+      <!-- Aler Scan -->
+      <div class="card project-card reveal reveal-delay-2">
+        <div class="project-header">
+          <h3 class="project-title">Aler Scan · Food Allergy Detector</h3>
+          <span class="badge badge-green">Completed</span>
+        </div>
+        <p class="project-desc">
+          An AI-powered web application that scans packaged food labels to detect allergens
+          and warn users about potential health risks. Uses image processing and NLP to
+          parse ingredient lists and cross-reference allergy databases in real time.
+        </p>
+        <div class="project-tags">
+          <span class="badge">Python</span>
+          <span class="badge">NLP</span>
+          <span class="badge">OCR</span>
+          <span class="badge">Flask</span>
+        </div>
+      </div>
+
+      <!-- Kolam -->
+      <div class="card project-card reveal reveal-delay-3">
+        <div class="project-header">
+          <h3 class="project-title">Kolam Generator</h3>
+          <span class="badge badge-green">Completed</span>
+        </div>
+        <p class="project-desc">
+          A web application that generates traditional Indian Kolam designs for any dot count,
+          with step-by-step interactive tutorials and downloadable preloaded Kolam and Rangoli
+          patterns. Combines algorithmic generative art with a clean, accessible UI.
+        </p>
+        <div class="project-tags">
+          <span class="badge">JavaScript</span>
+          <span class="badge">Canvas API</span>
+          <span class="badge">HTML/CSS</span>
+          <span class="badge">Generative Art</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+       ═══════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-tag">Technical Arsenal</div>
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+    <p class="section-sub">Technologies I work with — from Python scripting to geospatial AI and LLM tooling.</p>
+
+    <div class="skills-grid reveal">
+
+      <div class="card skill-group">
+        <div class="skill-group-title">Programming</div>
+        <div class="skill-items">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="card skill-group">
+        <div class="skill-group-title">AI / ML &amp; GIS</div>
+        <div class="skill-items">
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">YOLO</span>
+          <span class="skill-pill">PostGIS</span>
+          <span class="skill-pill">CesiumJS</span>
+          <span class="skill-pill">scikit-learn</span>
+          <span class="skill-pill">RAG</span>
+          <span class="skill-pill">LLM Prompting</span>
+        </div>
+      </div>
+
+      <div class="card skill-group">
+        <div class="skill-group-title">Databases</div>
+        <div class="skill-items">
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">DBMS</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="card skill-group">
+        <div class="skill-group-title">Tools &amp; Platforms</div>
+        <div class="skill-items">
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">Adobe XD</span>
+          <span class="skill-pill">Django</span>
+          <span class="skill-pill">Flask</span>
+        </div>
+      </div>
+
+      <div class="card skill-group">
+        <div class="skill-group-title">Agentic &amp; LLM Tools</div>
+        <div class="skill-items">
+          <span class="skill-pill">Prompt Engineering</span>
+          <span class="skill-pill">Claude Code</span>
+          <span class="skill-pill">HuggingFace</span>
+          <span class="skill-pill">n8n</span>
+          <span class="skill-pill">Memory-Augmented Gen</span>
+        </div>
+      </div>
+
+      <div class="card skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div>
+          <div class="lang-item">
+            <div class="lang-header"><span>English</span><span>Fluent</span></div>
+            <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header"><span>Tamil</span><span>Native</span></div>
+            <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EDUCATION
+       ═══════════════════════════════════════════ -->
+  <section id="education">
+    <div class="section-tag">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+    <p class="section-sub">Solid academic foundation in Information Technology and AI.</p>
+
+    <div class="edu-grid reveal">
+
+      <div class="card edu-card">
+        <div class="edu-degree">B.Tech — Information Technology</div>
+        <div class="edu-inst">P.T. Lee Chengalvaraya Naicker College of Engineering &amp; Technology</div>
+        <div class="edu-period">2023 — 2027 · Anna University</div>
+        <div class="edu-grade">CGPA 8.23 <span>/ 10</span></div>
+        <div style="margin-top:14px; display:flex; gap:6px; flex-wrap:wrap;">
+          <span class="badge">AI &amp; ML</span>
+          <span class="badge">Data Structures</span>
+          <span class="badge">OS</span>
+          <span class="badge">Full Stack</span>
+        </div>
+      </div>
+
+      <div class="card edu-card">
+        <div class="edu-degree">Higher Secondary — 12th</div>
+        <div class="edu-inst">Selvam Matric Higher Secondary School, Arakkonam</div>
+        <div class="edu-period">Completed 2023</div>
+        <div class="edu-grade">488 / 600 <span>· 81.3%</span></div>
+      </div>
+
+      <div class="card edu-card">
+        <div class="edu-degree">SSLC — 10th</div>
+        <div class="edu-inst">Selvam Matric Higher Secondary School, Arakkonam</div>
+        <div class="edu-period">Completed 2021</div>
+        <div class="edu-grade">All Pass <span>· COVID-19 Batch</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CERTIFICATES
+       ═══════════════════════════════════════════ -->
+  <section id="certificates">
+    <div class="section-tag">Credentials</div>
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-sub">Verified credentials from internships and industry training.</p>
+
+    <!-- Gallery -->
+    <div class="certs-grid reveal">
+      <div class="card cert-card" onclick="openLightbox('cert1.jpg')">
+        <div class="cert-img-wrap">
+          <img src="cert1.jpg" alt="AI/ML Internship Certificate – Infra Delta Solutions" loading="lazy" />
+          <div class="cert-overlay">
+            <div class="cert-info">
+              <div class="cert-name">AI/ML Internship Certificate</div>
+              <div class="cert-issuer">Infra Delta Solutions · Jul 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card cert-card" onclick="openLightbox('cert2.jpg')">
+        <div class="cert-img-wrap">
+          <img src="cert2.jpg" alt="AI/ML Internship Certificate – Virtual Tech Services" loading="lazy" />
+          <div class="cert-overlay">
+            <div class="cert-info">
+              <div class="cert-name">AI/ML Internship Certificate</div>
+              <div class="cert-issuer">Virtual Tech Services · Jul 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card cert-card" onclick="openLightbox('cert3.jpg')">
+        <div class="cert-img-wrap">
+          <img src="cert3.jpg" alt="Certificate 3" loading="lazy" />
+          <div class="cert-overlay">
+            <div class="cert-info">
+              <div class="cert-name">Additional Certification</div>
+              <div class="cert-issuer">View to see details</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List summary -->
+    <div class="cert-list reveal">
+      <div class="cert-item">
+        <div class="cert-icon"><i class='bx bx-award'></i></div>
+        <div class="cert-text">
+          <div class="ct">AI/ML Internship Certificate</div>
+          <div class="cs">Infra Delta Solutions · Jul 2026</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon"><i class='bx bx-award'></i></div>
+        <div class="cert-text">
+          <div class="ct">AI/ML Internship Certificate</div>
+          <div class="cs">Virtual Tech Services · Jul 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+       ═══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-sub">Interested in hiring or collaborating? Reach out — I'd love to connect.</p>
+
+    <div class="contact-wrapper reveal">
+
+      <div class="contact-info">
+        <h3>Let's Work Together</h3>
+        <p>
+          I'm actively looking for opportunities as a <strong>Graduate Engineering Trainee (Applied AI/ML)</strong>
+          and similar roles. I'm skilled in prompt engineering, RAG, GitHub workflows, and building
+          practical AI tools.
+        </p>
+
+        <div class="contact-items">
+          <div class="card contact-item">
+            <div class="c-icon"><i class='bx bx-phone'></i></div>
+            <div>
+              <div class="c-label">Phone</div>
+              <div class="c-value"><a href="tel:+919342588023">+91 93425 88023</a></div>
+            </div>
+          </div>
+          <div class="card contact-item">
+            <div class="c-icon"><i class='bx bx-envelope'></i></div>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-value"><a href="mailto:harishkamal2005@gmail.com">harishkamal2005@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="card contact-item">
+            <div class="c-icon"><i class='bx bx-map'></i></div>
+            <div>
+              <div class="c-label">Location</div>
+              <div class="c-value">Arakkonam, Tamil Nadu, India</div>
+            </div>
+          </div>
+          <div class="card contact-item">
+            <div class="c-icon"><i class='bx bxl-github'></i></div>
+            <div>
+              <div class="c-label">GitHub</div>
+              <div class="c-value"><a href="https://github.com/Harish-kamal2005" target="_blank" rel="noopener">Harish-kamal2005</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card contact-form">
+        <h3>Send a Message</h3>
+        <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="e.g. Job Opportunity – Indo Tech" />
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" id="send-btn">Send Message &rarr;</button>
+        </form>
+        <div class="form-success" id="form-success">
+          ✅ Message sent! I'll get back to you shortly.
+        </div>
+        <div class="form-error" id="form-error" style="display:none; margin-top:14px; padding:14px 18px; border-radius:10px; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.3); color:#f87171; font-size:0.88rem;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-brand">Harish<span>.</span></div>
+    <p class="footer-text">© 2026 Harish K · AI/ML Developer · Arakkonam, Tamil Nadu</p>
+    <div class="footer-socials">
+      <a href="https://github.com/Harish-kamal2005" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a href="mailto:harishkamal2005@gmail.com" class="social-link" aria-label="Email">
+        <i class='bx bx-envelope'></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class='bx bx-up-arrow-alt'></i>
+  </button>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Certificate fullscreen" />
+  </div>
+
+  <!-- ───── SCRIPTS ───── -->
+  <script>
+    /* ── Particles ── */
+    (function() {
+      const container = document.getElementById('particles');
+      const count = 30;
+      const colors = ['#0eb8a0','#38bdf8','#818cf8'];
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 6 + 3;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 20 + 15;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          background:${color};
+          left:${Math.random()*100}%;
+          animation-duration:${duration}s;
+          animation-delay:${delay}s;
+        `;
+        container.appendChild(p);
+      }
+    })();
+
+    /* ── Typed Effect ── */
+    const roles = ['AI / ML Developer', 'Prompt Engineer', 'RAG Builder', 'Problem Solver'];
+    let roleIdx = 0, charIdx = 0, deleting = false;
+    const target = document.getElementById('typed-role');
+    function type() {
+      const current = roles[roleIdx];
+      if (!deleting) {
+        target.textContent = current.slice(0, ++charIdx);
+        if (charIdx === current.length) { deleting = true; setTimeout(type, 1800); return; }
+      } else {
+        target.textContent = current.slice(0, --charIdx);
+        if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; }
+      }
+      setTimeout(type, deleting ? 60 : 100);
+    }
+    setTimeout(type, 600);
+
+    /* ── Navbar scroll ── */
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 50);
+      scrollTopBtn.classList.toggle('visible', y > 400);
+      updateActiveNav();
+    });
+
+    /* ── Active nav link ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 80;
+      sections.forEach(sec => {
+        if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }
+
+    /* ── Hamburger ── */
+    const ham = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-links');
+    ham.addEventListener('click', () => navMenu.classList.toggle('open'));
+    navLinks.forEach(l => l.addEventListener('click', () => navMenu.classList.remove('open')));
+
+    /* ── Reveal on scroll ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ── Lightbox ── */
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* ── EmailJS Init ── */
+    // ⚠️  Replace the string below with YOUR EmailJS Public Key
+    const EMAILJS_PUBLIC_KEY  = '2d-Jk0zPxsDYcoWaw';   // ✅ confirmed
+    const EMAILJS_SERVICE_ID  = 'service_s00v8li';      // ✅ confirmed
+    const EMAILJS_TEMPLATE_ID = 'template_rb06pou';     // ✅ confirmed
+
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+    /* ── Contact Form ── */
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      const btn  = document.getElementById('send-btn');
+      const form = document.getElementById('contact-form');
+      const successBox = document.getElementById('form-success');
+      const errorBox   = document.getElementById('form-error');
+
+      // Guard: remind user to set up keys
+      if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        errorBox.textContent = '⚙️ Portfolio owner: please configure EmailJS keys in index.html to enable email delivery.';
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      errorBox.style.display = 'none';
+
+      const templateParams = {
+        from_name:    document.getElementById('cf-name').value,
+        from_email:   document.getElementById('cf-email').value,
+        subject:      document.getElementById('cf-subject').value || 'Contact from Portfolio',
+        message:      document.getElementById('cf-message').value,
+        to_email:     'harishkamal2005@gmail.com',
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        })
+        .catch((err) => {
+          console.error('EmailJS error:', err);
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+          errorBox.textContent = '❌ Failed to send. Please email me directly at harishkamal2005@gmail.com';
+          errorBox.style.display = 'block';
+        });
+    }
+
+    /* ── Smooth nav click ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
 </body>
-<div class="home-img">
-    <div class="img-box">
-        <div class="img-item">
-          <img src="image.jpg">
-        </div>
-    </div>
-</div> 
 </html>
